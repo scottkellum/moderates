@@ -8,9 +8,12 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Moderates</title>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <link rel="stylesheet" href="https://use.typekit.net/hmm0udw.css">
   </head>
   <body>
-    <%= yield %>
+    <article>
+      <%= yield %>
+    </article>
+    <%= javascript_include_tag "site" %>
   </body>
 </html>
