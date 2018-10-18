@@ -21,9 +21,9 @@ img {
 
 .flag {
     width: 2em;
-    margin: .25em auto 0;
+    margin: .25em auto .1em;
     transform: rotate(10deg);
-    padding-left: 2em;
+    padding-left: 2.7em;
     z-index: 1;
     position: relative;
     mix-blend-mode: multiply;
@@ -37,25 +37,30 @@ h1 {
     display: table;
     position: relative;
     margin: 0 auto 1em;
-    line-height: 1;
+    line-height: .8;
     transform: rotate(-3deg);
     top: calc(var(--scrolly) / 9);
     mix-blend-mode: multiply;
+    text-align: right;
     --font-size:
-        2em / 300,
-        6em / 1200
+        1.8em / 300,
+        5em / 1200
     ;
+    span {
+        display: block;
+        transform: translatex(-.25em);
+    }
     &:before {
         content: '';
-        width: 2.5em;
-        height: 2.5em;
+        width: 3.2em;
+        height: 3.2em;
         border-radius: 50%;
         background-color: #ff0;
         position: absolute;
         mix-blend-mode: multiply;
         z-index: -1;
-        top: calc(var(--scrolly) / -9 - 1em);
-        left: 1.25em;
+        top: calc(var(--scrolly) / -9 - 1.2em);
+        left: 1.45em;
     }
 }
 
