@@ -224,6 +224,18 @@ filter: hue-rotate(250deg);
   }
 }
 
+.seventeen {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+  filter: hue-rotate(10deg);
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 7 / 8;
+    margin: 0 15% 0 10%;
+    width: 75%;
+  }
+}
+
 li {
     display: flex;
     margin: 4em 0;
