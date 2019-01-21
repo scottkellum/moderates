@@ -175,7 +175,7 @@ ul {
 
 .eleven {
   grid-column: 2 / 4;
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
   align-self: center;
   padding: 1rem;
   @media (max-width: 40em) {
@@ -188,7 +188,7 @@ ul {
 
 .twelve {
   grid-column: 4 / 5;
-  grid-row: 5 / 5;
+  grid-row: 4 / 4;
 filter: hue-rotate(250deg);
 @media (max-width: 40em) {
   grid-column: 1 / 6;
@@ -239,6 +239,31 @@ filter: hue-rotate(250deg);
     grid-row: 7 / 8;
     margin: 0 15% 0 10%;
     width: 75%;
+  }
+}
+
+.twenty-one {
+  grid-column: 2 / 4;
+  grid-row: 7 / 8;
+  align-self: center;
+  padding: 1rem;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 10 / 11;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.twenty-two {
+  grid-column: 4 / 5;
+  grid-row: 7 / 7;
+  filter: hue-rotate(250deg);
+  @media (max-width: 40em) {
+  grid-column: 1 / 6;
+  grid-row: 9 / 10;
+  margin: 0 15% 0 10%;
+  width: 75%;
   }
 }
 
