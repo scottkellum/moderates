@@ -164,7 +164,7 @@ ul {
   grid-row: 4 / 4;
   padding: 1rem;
   margin: auto;
-  max-width: 60rem;
+  max-width: 100rem;
   @media (max-width: 40em) {
     grid-column: 1 / 6;
     grid-row: 4 / 5;
@@ -175,9 +175,24 @@ ul {
 
 .eleven {
   grid-column: 2 / 4;
+  grid-row: 5 / 5;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 6 / 7;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.digitally {
+  grid-column: 2 / 4;
   grid-row: 4 / 5;
   align-self: center;
   padding: 1rem;
+  margin-right: 1rem;
   @media (max-width: 40em) {
     grid-column: 1 / 6;
     grid-row: 6 / 7;
@@ -188,8 +203,21 @@ ul {
 
 .twelve {
   grid-column: 4 / 5;
-  grid-row: 4 / 4;
+  grid-row: 5 / 5;
 filter: hue-rotate(250deg);
+@media (max-width: 40em) {
+  grid-column: 1 / 6;
+  grid-row: 5 / 6;
+  margin: 0 15% 0 10%;
+  width: 75%;
+  }
+}
+
+.laptop {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+  filter: hue-rotate(50deg);
+  margin: 2rem;
 @media (max-width: 40em) {
   grid-column: 1 / 6;
   grid-row: 5 / 6;
@@ -217,9 +245,35 @@ filter: hue-rotate(250deg);
   }
 }
 
+.in-person-img {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  filter: hue-rotate(10deg);
+  margin: 2rem;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 7 / 8;
+    margin: 0 15% 0 10%;
+    width: 75%;
+  }
+}
+
 .eighteen {
   grid-column: 3 / 5;
   grid-row: 6 / 7;
+  align-self: center;
+  padding: 1rem;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 8 / 9;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.in-person-text {
+  grid-column: 3 / 5;
+  grid-row: 5 / 6;
   align-self: center;
   padding: 1rem;
   @media (max-width: 40em) {
@@ -255,10 +309,36 @@ filter: hue-rotate(250deg);
   }
 }
 
+.in-media-text {
+  grid-column: 2 / 4;
+  grid-row: 6 / 7;
+  align-self: center;
+  padding: 1rem;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 10 / 11;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
 .twenty-two {
   grid-column: 4 / 5;
   grid-row: 7 / 7;
   filter: hue-rotate(250deg);
+  @media (max-width: 40em) {
+  grid-column: 1 / 6;
+  grid-row: 9 / 10;
+  margin: 0 15% 0 10%;
+  width: 75%;
+  }
+}
+
+.in-media-img {
+  grid-column: 4 / 5;
+  grid-row: 6 / 7;
+  filter: hue-rotate(250deg);
+  margin: 2rem;
   @media (max-width: 40em) {
   grid-column: 1 / 6;
   grid-row: 9 / 10;
