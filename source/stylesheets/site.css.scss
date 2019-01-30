@@ -189,7 +189,7 @@ ul {
 
 .digitally {
   grid-column: 2 / 4;
-  grid-row: 4 / 5;
+  grid-row: 5 / 6;
   align-self: center;
   padding: 1rem;
   margin-right: 1rem;
@@ -199,6 +199,11 @@ ul {
     margin-left: .5em;
     margin-right: .5em;
   }
+}
+
+.section-title {
+  font-size: 2em;
+  margin: 0;
 }
 
 .twelve {
@@ -215,7 +220,7 @@ filter: hue-rotate(250deg);
 
 .laptop {
   grid-column: 4 / 5;
-  grid-row: 4 / 5;
+  grid-row: 5 / 6;
   filter: hue-rotate(50deg);
   margin: 2rem;
 @media (max-width: 40em) {
@@ -247,7 +252,7 @@ filter: hue-rotate(250deg);
 
 .in-person-img {
   grid-column: 2 / 3;
-  grid-row: 5 / 6;
+  grid-row: 6 / 7;
   filter: hue-rotate(10deg);
   margin: 2rem;
   @media (max-width: 40em) {
@@ -273,7 +278,7 @@ filter: hue-rotate(250deg);
 
 .in-person-text {
   grid-column: 3 / 5;
-  grid-row: 5 / 6;
+  grid-row: 6 / 7;
   align-self: center;
   padding: 1rem;
   @media (max-width: 40em) {
@@ -311,7 +316,7 @@ filter: hue-rotate(250deg);
 
 .in-media-text {
   grid-column: 2 / 4;
-  grid-row: 6 / 7;
+  grid-row: 7 / 8;
   align-self: center;
   padding: 1rem;
   @media (max-width: 40em) {
@@ -336,7 +341,7 @@ filter: hue-rotate(250deg);
 
 .in-media-img {
   grid-column: 4 / 5;
-  grid-row: 6 / 7;
+  grid-row: 7 / 8;
   filter: hue-rotate(250deg);
   margin: 2rem;
   @media (max-width: 40em) {
