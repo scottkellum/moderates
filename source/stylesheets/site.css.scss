@@ -457,3 +457,12 @@ footer {
         margin-right: .5em;
     }
 }
+
+
+/////////////////////////////////////////////////////////////////////
+// 3RD PARTY stylesheet
+
+// Mailchimp close modal z-index fix
+.mc-closeModal {
+  z-index: 9;
+}
