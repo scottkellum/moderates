@@ -10,7 +10,7 @@
     <title>Generations Project</title>
     <%= stylesheet_link_tag "site" %>
     <link rel="stylesheet" href="https://use.typekit.net/hmm0udw.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"937133ed9d1696b46b60f919a","lid":"6f5d849ebd","uniqueMethods":true}) })</script>
 
   </head>
@@ -18,10 +18,25 @@
       <nav id="nav">
         <a href="partner.html"><strong>Partner</strong></a>
         <a href="about.html"><strong>About</strong></a>
+        <a href="testimonials.html"><strong>Testimonals</strong></a>
       </nav>
     <article>
       <%= yield %>
     </article>
+    <footer>
+      <ol>
+          <h2>Credits</h2>
+          <li><span>Creative director:</span> Ana Monroe</li>
+          <li><span>Producer:</span> Katrina Kaufman</li>
+          <li><span>Lead designer:</span> Scott Kellum</li>
+      </ol>
+      <ol>
+          <h2>Sponsors</h2>
+          <li><a href="https://www.sixtyfirstproductions.com" style="font-family:halyard-display;font-weight:600;font-style:italic;color:#ff0;background-color:#000;display:block;padding:.4em;text-decoration: none;" target="_blank">Sixty First Productions</a></li>
+          <li><a href="https://www.aiga.org/" target="_blank"><img src="/images/aiga.png" alt="AIGA"></a></li>
+          <li><a href="http://www.brooklyngrain.com/" target="_blank"><img src="/images/brooklyngrain.png" alt="Brooklyn Grain"></a></li>
+      </ol>
+    </footer>
     <%= javascript_include_tag "site" %>
   </body>
 </html>
