@@ -19,7 +19,7 @@
     <i class="far fa-arrow-alt-circle-down"></i>
   </h2>
 
-  <form netlify>
+  <form id="quiz-container" name="Generations Quiz" netlify>
     <ul class="questions">
       <% questions.each do |question| %>
         <li>
@@ -38,10 +38,10 @@
       <% end %>
     </ul>
 
-    <div><button type="submit">Submit</button></div>
+    <div id="quiz-submit"><button type="submit">Submit</button></div>
   </form>
 
-  <div id="result-container" class="hide">
+<form name="Contact Info" netlify id="result-container" class="hide">
   <div>
     <p>You got <span id="result"></span>!</p>
     <img src="https://via.placeholder.com/100" />
@@ -52,8 +52,8 @@
       <p>
         Let's Keep in Touch!
         <input id="contact-info" placeholder="email or instagram handle" />
-        <i id="submit-contact-info" class="fa fa-paper-plane"></i>
+        <button type="submit"><i id="submit-contact-info" class="fa fa-paper-plane"></i></button>
       </p>
     </div>
   </div>
-</div>
+</form>

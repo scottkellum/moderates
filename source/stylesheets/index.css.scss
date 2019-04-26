@@ -25,11 +25,11 @@
   }
 }
 
-form {
+#quiz-container {
   display: flex;
   flex-direction: column;
 
-  button[type="submit"] {
+  #quiz-submit button {
     float: right;
     background: #ff0;
     border: none;
@@ -165,10 +165,15 @@ form {
         border: 2px solid #f0f;
       }
 
-      i {
+      button {
+        background: none;
         border: 1px solid #f0f;
         padding: 8px 10px 8px 8px;
         cursor: pointer;
+
+        i {
+          color: black;
+        }
       }
     }
   }

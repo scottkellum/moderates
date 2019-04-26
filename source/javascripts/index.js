@@ -36,14 +36,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var $form = $(this);
 
-    $.post($form.attr("action"), $form.serialize()).then(function() {
+    var data = {
+      result: result,
+      connected: connected,
+      energetic: energetic,
+      exploring: exploring,
+      questionResults: {}
+    };
+
+    $(this).find("input").each(function(i, el) {
+      if ($(el).is(':checked')) {
+        data.questionResults[el.name] = el.value;
+      }
+    })
+
+    $.post($form.attr("action"), $.param(data)).then(function() {
       alert("Thank you!");
     });
   }, false);
 
 
-  var submitContactInfoElement = document.querySelector("#submit-contact-info");
+  $("#result-container").on('submit', function(event) {
+    event.preventDefault();
+
+    var $form = $(this);
+
+    $(this).find("input").each(function(i, el) {
+      var data = {
+        contactInfo: el.value,
+      };
+
+      $.post($form.attr("action"), $.param(data)).then(function() {
+        alert("Thank you!");
+      });
+    })
+  });
 });
-
-
 
