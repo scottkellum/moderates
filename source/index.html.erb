@@ -2,53 +2,49 @@
 <%= stylesheet_link_tag "index" %>
 <%= javascript_include_tag "index" %>
 
-<div class="wrapper">
-  <div class= "two">
-    <a href="/">
-      <img class="logo" src="/images/logo_v4.svg" alt="🇺🇸" >
-    </a>
-  </div>
+<div class="three">
+  <h2 id="title"><i>what is it?</i></h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Arcu cursus vitae congue mauris rhoncus aenean. Et tortor consequat id porta nibh venenatis cras. Nulla pellentesque dignissim enim sit amet venenatis. Tristique senectus
+  </p>
+  <iframe src="https://player.vimeo.com/video/294493360?title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <h2 id="title"><strong>You have all the tools you need.</strong></h2>
+  <h2 id="title"><i>use them.</i></h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae
+  </p>
 
+  <h3>
+    Take the quiz!
+    <i class="far fa-arrow-alt-circle-down"></i>
+  </h3>
 
-  <div class="three">
-    <h2 id="title"><i>what is it?</i></h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Arcu cursus vitae congue mauris rhoncus aenean. Et tortor consequat id porta nibh venenatis cras. Nulla pellentesque dignissim enim sit amet venenatis. Tristique senectus
-    </p>
-    <iframe src="https://player.vimeo.com/video/294493360?title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <h2 id="title"><strong>You have all the tools you need.</strong></h2>
-    <h2 id="title"><i>use them.</i></h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae
-    </p>
+  <form>
+    <ul class="questions">
+      <% questions.each do |question| %>
+        <li>
+          <div class="name"><h3><%= question.name %></h3></div>
+          <ul class="answers">
+            <% question.options.each do |option| %>
+              <li>
+                <label>
+                  <input type="radio" name="<%= question.key %>" value="<%= option.value %>" />
+                  <%= option.name %>
+                </label>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
 
-    <h3>
-      Take the quiz!
-      <i class="far fa-arrow-alt-circle-down"></i>
-    </h3>
+    <button type="submit">Submit</button>
+  </form>
 
-    <form>
-      <ul class="questions">
-        <% questions.each do |question| %>
-          <li>
-            <div class="name"><h3><%= question.name %></h3></div>
-            <ul class="answers">
-              <% question.options.each do |option| %>
-                <li>
-                  <label>
-                    <input type="radio" name="<%= question.key %>" value="<%= option.value %>" />
-                    <%= option.name %>
-                  </label>
-                </li>
-              <% end %>
-            </ul>
-          </li>
-        <% end %>
-      </ul>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <div id="result"></div>
+  <div id="result">
+    You got ResultOfQuiz!
+    <img src="https://via.placeholder.com/300/09f/fff.png" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper viverra nam libero justo laoreet sit amet cursus sit. Dui accumsan sit amet nulla facilisi.</p>
+    <span>Let's Keep in Touch! <input placeholder="email or instagram handle" />
   </div>
 </div>
