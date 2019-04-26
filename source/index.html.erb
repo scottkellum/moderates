@@ -3,21 +3,21 @@
 <%= javascript_include_tag "index" %>
 
 <div class="three">
-  <h2 id="title"><i>what is it?</i></h2>
+  <blockquote id="title">what is it?</blockquote>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Arcu cursus vitae congue mauris rhoncus aenean. Et tortor consequat id porta nibh venenatis cras. Nulla pellentesque dignissim enim sit amet venenatis. Tristique senectus
   </p>
   <iframe src="https://player.vimeo.com/video/294493360?title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <h2 id="title"><strong>You have all the tools you need.</strong></h2>
-  <h2 id="title"><i>use them.</i></h2>
+  <h2 id="title">You have all the tools you need.</h2>
+  <blockquote id="title">use them.</blockquote>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae
   </p>
 
-  <h3>
+  <h2>
     Take the quiz!
     <i class="far fa-arrow-alt-circle-down"></i>
-  </h3>
+  </h2>
 
   <form>
     <ul class="questions">
@@ -38,13 +38,22 @@
       <% end %>
     </ul>
 
-    <button type="submit">Submit</button>
+    <div><button type="submit">Submit</button></div>
   </form>
 
-  <div id="result">
-    You got ResultOfQuiz!
-    <img src="https://via.placeholder.com/300/09f/fff.png" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper viverra nam libero justo laoreet sit amet cursus sit. Dui accumsan sit amet nulla facilisi.</p>
-    <span>Let's Keep in Touch! <input placeholder="email or instagram handle" />
+  <div id="result-container" class="hide">
+  <div>
+    <p>You got <span id="result"></span>!</p>
+    <img src="https://via.placeholder.com/100" />
+  </div>
+  <div>
+    <p id="result-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper viverra nam libero justo laoreet sit amet cursus sit. Dui accumsan sit amet nulla facilisi.</p>
+    <div class="input-container">
+      <p>
+        Let's Keep in Touch!
+        <input id="contact-info" placeholder="email or instagram handle" />
+        <i id="submit-contact-info" class="fa fa-paper-plane"></i>
+      </p>
+    </div>
   </div>
 </div>

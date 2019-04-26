@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   var form = document.querySelector("form");
-  var result = document.querySelector("#result");
+  var resultContainerElement = document.querySelector("#result-container");
+  var resultElement = document.querySelector("#result");
+  var resultDescriptionElement = document.querySelector("#result-description");
 
   var inputs = document.querySelectorAll('input');
 
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var connected = 0;
     var energetic = 0;
     var exploring = 0;
-    var r = 'Exploring';
+    var result = 'Exploring';
 
     var data = new FormData(form);
     var output = "";
@@ -22,11 +24,26 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     if (connected > energetic && connected > exploring) {
-      r = 'Connected';
+      result = 'Connected';
     } else if (energetic > connected && energetic > exploring) {
-      r = 'Energetic';
+      result = 'Energetic';
     }
 
-    result.innerText = r + ` ${connected}, ${energetic}, ${exploring}`;
+    // result.innerText = result + ` ${connected}, ${energetic}, ${exploring}`;
+    resultContainerElement.classList.remove('hide');
+    resultElement.innerText = result;
+    resultDescriptionElement.innerText = result;
+
+    var $form = $(this);
+
+    $.post($form.attr("action"), $form.serialize()).then(function() {
+      alert("Thank you!");
+    });
   }, false);
+
+
+  var submitContactInfoElement = document.querySelector("#submit-contact-info");
 });
+
+
+
