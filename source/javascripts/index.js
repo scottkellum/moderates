@@ -1,21 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var form = document.querySelector("form");
   var resultContainerElement = document.querySelector("#result-container");
   var resultElement = document.querySelector("#result");
   var resultDescriptionElement = document.querySelector("#result-description");
 
   var inputs = document.querySelectorAll('input');
 
-  form.addEventListener("submit", function(event) {
+  $('#quiz-containe').on("submit", function(event) {
     event.preventDefault();
+    var $form = $(this);
 
     var connected = 0;
     var energetic = 0;
     var exploring = 0;
     var result = 'Exploring';
 
-    var data = new FormData(form);
+    var data = new FormData($form);
     var output = "";
+
     for (const entry of data) {
       var breakdown = entry[1].split(',');
       connected = connected + Number.parseInt(breakdown[0]);
@@ -34,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     resultElement.innerText = result;
     resultDescriptionElement.innerText = result;
 
-    var $form = $(this);
-
     var data = {
       result: result,
       connected: connected,
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
       questionResults: {}
     };
 
-    $(this).find("input").each(function(i, el) {
+    $form.find("input").each(function(i, el) {
       if ($(el).is(':checked')) {
         data.questionResults[el.name] = el.value;
       }
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var $form = $(this);
 
-    $(this).find("input").each(function(i, el) {
+    $form.find("input").each(function(i, el) {
       var data = {
         contactInfo: el.value,
       };
