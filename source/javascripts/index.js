@@ -36,20 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resultElement.innerText = result;
     resultDescriptionElement.innerText = result;
 
-    var data = {
-      'form-name': $form.attr('name'),
-      result: result,
-      connected: connected,
-      energetic: energetic,
-      exploring: exploring,
-      questionResults: {}
-    };
-
-    $form.find("input").each(function(i, el) {
-      if ($(el).is(':checked')) {
-        data.questionResults[el.name] = el.value;
-      }
-    })
+    var data = $form.serialize();
 
     $.post($form.attr("action"), $.param(data)).then(function() {
       alert("Thank you!");
@@ -61,17 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
 
     var $form = $(this);
+    var data = $form.serialize();
 
-    $form.find("input").each(function(i, el) {
-      var data = {
-        'form-name': $form.attr('name'),
-        contactInfo: el.value,
-      };
-
-      $.post($form.attr("action"), $.param(data)).then(function() {
-        alert("Thank you!");
-      });
-    })
+    $.post($form.attr("action"), data).then(function() {
+      alert("Thank you!");
+    });
   });
 });
 
