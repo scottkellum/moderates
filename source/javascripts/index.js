@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
   var resultContainerElement = document.querySelector("#result-container");
-  var resultElement = document.querySelector("#result");
-  var resultDescriptionElement = document.querySelector("#result-description");
 
   var inputs = document.querySelectorAll('input');
 
@@ -31,10 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
       result = 'Energetic';
     }
 
-    // result.innerText = result + ` ${connected}, ${energetic}, ${exploring}`;
-    resultContainerElement.classList.remove('hide');
-    resultElement.innerText = result;
-    resultDescriptionElement.innerText = result;
+    document.querySelector("#anonymous-result").value = result;
+    document.querySelector("#result-container").classList.remove('hide');
+    document.querySelector("#result").innerText = result;
+    document.querySelector("#quiz-result").value = result + ` ${connected}, ${energetic}, ${exploring}`;
+    document.querySelector("#result-description").innerText = result;
 
     var data = $form.serialize();
 
