@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var data = $form.serialize();
 
-    $.post($form.attr("action"), $.param(data)).then(function() {
+    $.post($form.attr("action"), data).then(function() {
       alert("Thank you!");
     });
   });
