@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resultDescriptionElement.innerText = result;
 
     var data = {
+      'form-name': $form.attr('name'),
       result: result,
       connected: connected,
       energetic: energetic,
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     $form.find("input").each(function(i, el) {
       var data = {
+        'form-name': $form.attr('name'),
         contactInfo: el.value,
       };
 
