@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var inputs = document.querySelectorAll('input');
 
-  $('#quiz-containe').on("submit", function(event) {
+  $('#quiz-container').on("submit", function(event) {
     event.preventDefault();
+
     var $form = $(this);
 
     var connected = 0;
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.post($form.attr("action"), $.param(data)).then(function() {
       alert("Thank you!");
     });
-  }, false);
+  });
 
 
   $("#result-container").on('submit', function(event) {
