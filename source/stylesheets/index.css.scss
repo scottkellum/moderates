@@ -48,6 +48,7 @@
       display: flex;
       flex-direction: column;
       margin: 0;
+      box-sizing: border-box;
 
       .name {
         background: #ff0;
@@ -78,38 +79,36 @@
           label {
             padding-top: 12px;
             width: 80%;
+            box-sizing: border-box;
             cursor: pointer;
+          }
+
+          &::before {
+            cursor: pointer;
+            font-size: 40px;
+            padding-left: 10px;
+            width: 20%;
+            box-sizing: border-box;
           }
 
           &:first-child {
             background: #f0f;
             &::before {
-              cursor: pointer;
               content: "A";
-              font-size: 40px;
-              padding-left: 10px;
-              width: 20%;
-              box-sizing: border-box;
             }
           }
 
           &:nth-child(2) {
             background: #00ADEE;
             &::before {
-              cursor: pointer;
               content: "B";
-              font-size: 40px;
-              padding-left: 10px;
             }
           }
 
           &:last-child {
             background: #000;
             &::before {
-              cursor: pointer;
               content: "C";
-              font-size: 40px;
-              padding-left: 10px;
             }
           }
         }
