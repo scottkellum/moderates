@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var resultContainerElement = document.querySelector("#result-container");
 
-  var inputs = document.querySelectorAll('input');
+document.addEventListener("DOMContentLoaded", function() {
+  var uuid = uuidv4();
 
   $('#quiz-container').on("submit", function(event) {
     event.preventDefault();
@@ -30,9 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelector("#anonymous-result").value = result;
+    document.querySelector("#anonymous-id").value = uuid;
     document.querySelector("#result-container").classList.remove('hide');
     document.querySelector("#result").innerText = result;
     document.querySelector("#quiz-result").value = result + ` ${connected}, ${energetic}, ${exploring}`;
+    document.querySelector("#quiz-id").value = uuid;
     document.querySelector("#result-description").innerText = result;
 
     var data = $form.serialize();
@@ -55,3 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  )
+}

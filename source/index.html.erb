@@ -21,6 +21,7 @@
 
   <form id="quiz-container" name="Generations Quiz" netlify>
     <input id="anonymous-result" name="result" hidden />
+    <input id="anonymous-id" name="id" hidden />
     <ul class="questions">
       <% questions.each do |question| %>
         <li>
@@ -54,6 +55,7 @@
         Let's Keep in Touch!
         <input id="contact-info" name="contact-info" placeholder="email or instagram handle" />
         <input id="quiz-result" name="result" hidden />
+        <input id="quiz-id" name="id" hidden />
         <button type="submit"><i id="submit-contact-info" class="fa fa-paper-plane"></i></button>
       </p>
     </div>
