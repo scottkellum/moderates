@@ -30,7 +30,7 @@
             <% question.options.each do |option| %>
               <li>
                 <label>
-                  <input type="radio" name="<%= question.key %>" value="<%= option.value %>" />
+                  <input required type="radio" name="<%= question.key %>" value="<%= option.value %>" />
                   <%= option.name %>
                 </label>
               </li>
