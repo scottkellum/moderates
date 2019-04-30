@@ -69,45 +69,46 @@
 
         li {
           display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
+          flex-direction: column;
           width: 32%;
           color: white;
           height: 150px;
 
-
           label {
-            padding-top: 12px;
-            width: 80%;
+            padding: 0 10px 10px 10px;
+            height: 100%;
+            width: 100%;
             box-sizing: border-box;
             cursor: pointer;
-          }
 
-          &::before {
-            cursor: pointer;
-            font-size: 40px;
-            padding-left: 10px;
-            width: 20%;
-            box-sizing: border-box;
+            &::before {
+              display: block;
+              cursor: pointer;
+              font-size: 40px;
+              padding-left: 10px;
+              width: 100%;
+              box-sizing: border-box;
+              text-align: center;
+            }
           }
 
           &:first-child {
             background: #f0f;
-            &::before {
+            label::before {
               content: "A";
             }
           }
 
           &:nth-child(2) {
             background: #00ADEE;
-            &::before {
+            label::before {
               content: "B";
             }
           }
 
           &:last-child {
             background: #000;
-            &::before {
+            label::before {
               content: "C";
             }
           }
