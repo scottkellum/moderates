@@ -65,9 +65,9 @@ helpers do
         Option.new(name: "Inclusiveness: hearing less from either extreme.", value: "0,0,3")
       ]),
       Question.new(name: "What’s the most pressing issue for you?", key: "pressing", options: [
-        Option.new(name: "Climate Change", value: "1,1,1"),
-        Option.new(name: "Economic inequality", value: "1,1,1"),
-        Option.new(name: "Advocating for marginalized groups", value: "1,1,1")
+        Option.new(name: "Climate Change", value: "0,0,0"),
+        Option.new(name: "Economic inequality", value: "0,0,0"),
+        Option.new(name: "Advocating for marginalized groups", value: "0,0,0")
       ]),
       Question.new(name: "What is something you feel like you don't have?", key: "lack", options: [
         Option.new(name: "I just have no time.", value: "2,0,0"),
@@ -80,9 +80,9 @@ helpers do
         Option.new(name: "I have a lot of experience with working through complicated life problems.", value: "0,0,3")
       ]),
       Question.new(name: "Which superpower?", key: "superpower", options: [
-        Option.new(name: "To be quantum, so I can be in more than one place at a time", value: "2,0,0"),
-        Option.new(name: "Super strength", value: "0,1,0"),
-        Option.new(name: "Telepathy (reading others thoughts)", value: "0,0,3")
+        Option.new(name: "To be quantum, so I can be in more than one place at a time", value: "0,0,0"),
+        Option.new(name: "Super strength", value: "0,0,0"),
+        Option.new(name: "Telepathy (reading others thoughts)", value: "0,0,0")
       ])
     ]
   end
