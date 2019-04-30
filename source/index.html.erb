@@ -53,7 +53,7 @@
     <div class="input-container">
       <p>
         Let's Keep in Touch!
-        <input id="contact-info" name="contact-info" placeholder="email or instagram handle" />
+        <input required id="contact-info" name="contact-info" placeholder="email or instagram handle"title="must be an email or an instagram handle(must include '@' in the beginning)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$|@([A-Za-z0-9_](?:(?:[A-Za-z0-9_]|(?:\\.(?!\\.))){0,28}(?:[A-Za-z0-9_]))?)" />
         <input id="quiz-result" name="result" hidden />
         <input id="quiz-id" name="id" hidden />
         <button type="submit"><i id="submit-contact-info" class="fa fa-paper-plane"></i></button>

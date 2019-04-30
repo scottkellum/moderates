@@ -12,14 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var exploring = 0;
     var result = 'Exploring';
 
-    var data = new FormData($form);
-    var output = "";
+    var answers = $form.serializeArray()
 
-    for (const entry of data) {
-      var breakdown = entry[1].split(',');
-      connected = connected + Number.parseInt(breakdown[0]);
-      energetic = energetic + Number.parseInt(breakdown[1]);
-      exploring = exploring + Number.parseInt(breakdown[2]);
+    for (var i = 0; i < answers.length; i++) {
+      var answer = answers[i];
+
+      if (['result', 'id'].includes(answer.name)) {
+        continue;
+      }
+
+      var breakdown = answer.value.split(',');
+
+      connected += Number.parseInt(breakdown[0]);
+      energetic += Number.parseInt(breakdown[1]);
+      exploring += Number.parseInt(breakdown[2]);
     };
 
     if (connected > energetic && connected > exploring) {
@@ -39,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var data = $form.serialize();
 
     $.post($form.attr("action"), data).then(function() {
-      alert("Thank you!");
+      console.log("Form Submitted!");
     });
   });
 
@@ -51,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var data = $form.serialize();
 
     $.post($form.attr("action"), data).then(function() {
-      alert("Thank you!");
+      console.log("Contact Info Submitted!");
+      window.location.reload(true);
     });
   });
 });
