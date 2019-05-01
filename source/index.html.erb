@@ -30,7 +30,7 @@
             <% question.options.each do |option| %>
               <li>
                 <label>
-                  <input required type="radio" name="<%= question.key %>" value="<%= option.value %>" />
+                  <input  type="radio" name="<%= question.key %>" value="<%= option.value %>" />
                   <%= option.name %>
                 </label>
               </li>
@@ -46,7 +46,7 @@
 <form name="Contact Info" netlify id="result-container" class="hide">
   <div>
     <p>You got <span id="result"></span>!</p>
-    <img src="https://via.placeholder.com/100" />
+    <img id="result-image" src="https://via.placeholder.com/100" />
   </div>
   <div>
     <p id="result-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper viverra nam libero justo laoreet sit amet cursus sit. Dui accumsan sit amet nulla facilisi.</p>
