@@ -72,7 +72,7 @@
           flex-direction: column;
           width: 32%;
           color: white;
-          height: 150px;
+          min-height: 150px;
 
           label {
             padding: 0 10px 10px 10px;
@@ -136,7 +136,7 @@
       margin-bottom: 10px;
     }
     img {
-      width: 150px;
+      max-width: 150px;
     }
 
     &:first-of-type {
