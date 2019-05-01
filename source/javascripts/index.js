@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var $form = $(this);
 
-    var connected = 0;
+    var embedded = 0;
     var energetic = 0;
     var exploring = 0;
     var result = 'Exploring';
@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var breakdown = answer.value.split(',');
 
-      connected += Number.parseInt(breakdown[0]);
-      energetic += Number.parseInt(breakdown[1]);
+      energetic += Number.parseInt(breakdown[0]);
+      embedded += Number.parseInt(breakdown[1]);
       exploring += Number.parseInt(breakdown[2]);
     };
 
-    if (connected > energetic && connected > exploring) {
-      result = 'Connected';
-    } else if (energetic > connected && energetic > exploring) {
+    if (embedded > energetic && embedded > exploring) {
+      result = 'Embedded';
+    } else if (energetic > embedded && energetic > exploring) {
       result = 'Energetic';
     }
 
@@ -38,9 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#anonymous-id").value = uuid;
     document.querySelector("#result-container").classList.remove('hide');
     document.querySelector("#result").innerText = result;
-    document.querySelector("#quiz-result").value = result + ` ${connected}, ${energetic}, ${exploring}`;
+    document.querySelector("#quiz-result").value = result + ` ${embedded}, ${energetic}, ${exploring}`;
     document.querySelector("#quiz-id").value = uuid;
     document.querySelector("#result-description").innerText = result;
+    document.querySelector("#result-image").src = '/images/result_' + result.toLowerCase() + '.svg';
+    document.querySelector("#result-image").alt = 'Energetic';
 
     var data = $form.serialize();
 
