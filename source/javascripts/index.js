@@ -23,12 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var breakdown = answer.value.split(',');
 
-      energetic += Number.parseInt(breakdown[0]);
-      embedded += Number.parseInt(breakdown[1]);
-      exploring += Number.parseInt(breakdown[2]);
+      console.log([energetic, embedded, exploring]);
+      console.log([breakdown[0], breakdown[1], breakdown[2]]);
+      console.log('________________________________________');
+
+      energetic = energetic + Number.parseInt(breakdown[0]);
+      embedded = embedded + Number.parseInt(breakdown[1]);
+      exploring = exploring + Number.parseInt(breakdown[2]);
     };
 
-    console.log([energetic, embedded, exploring]);
 
     if (embedded > energetic && embedded > exploring) {
       result = 'Embedded';
