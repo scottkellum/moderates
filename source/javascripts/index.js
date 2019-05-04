@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
       exploring += Number.parseInt(breakdown[2]);
     };
 
+    console.log([energetic, embedded, exploring]);
+
     if (embedded > energetic && embedded > exploring) {
       result = 'Embedded';
     } else if (energetic > embedded && energetic > exploring) {
