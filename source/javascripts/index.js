@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var breakdown = answer.value.split(',');
 
-      console.log([energetic, embedded, exploring]);
-      console.log([breakdown[0], breakdown[1], breakdown[2]]);
-      console.log('________________________________________');
-
       if (breakdown[1] != undefined) {
         energetic += Number.parseInt(breakdown[0]);
         embedded += Number.parseInt(breakdown[1]);
