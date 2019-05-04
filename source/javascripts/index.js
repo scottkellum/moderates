@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var exploring = 0;
     var result = 'Exploring';
 
-    var answers = $form.serializeArray()
+    var answers = $form.serializeArray();
 
     for (var i = 0; i < answers.length; i++) {
       var answer = answers[i];
@@ -27,9 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log([breakdown[0], breakdown[1], breakdown[2]]);
       console.log('________________________________________');
 
-      energetic = energetic + Number.parseInt(breakdown[0]);
-      embedded = embedded + Number.parseInt(breakdown[1]);
-      exploring = exploring + Number.parseInt(breakdown[2]);
+      if (Number.parseInt(breakdown[0]) != NaN) {
+        energetic = energetic + Number.parseInt(breakdown[0]);
+        embedded = embedded + Number.parseInt(breakdown[1]);
+        exploring = exploring + Number.parseInt(breakdown[2]);
+      }
     };
 
 
