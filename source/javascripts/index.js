@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-
   $("#result-container").on('submit', function(event) {
     event.preventDefault();
 
