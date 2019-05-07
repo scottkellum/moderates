@@ -232,10 +232,12 @@ filter: hue-rotate(250deg);
 }
 
 .us {
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 50%;
   min-width: 200px;
+  grid-row: 5 / 5;
+  grid-column: 4 / 5;
 }
 
 .seventeen {

@@ -42,7 +42,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#result").innerText = result;
     document.querySelector("#quiz-result").value = result + ` ${embedded}, ${energetic}, ${exploring}`;
     document.querySelector("#quiz-id").value = uuid;
-    document.querySelector("#result-description").innerText = result;
+    if (result === 'Energetic') {
+      document.querySelector("#result-description").innerText = `You have a ton of passion, and you're ready to get your hands dirty. Maybe direct actions like marches  are your thing, or maybe you'd like to actively support a candidate for a local committee or public office. Sign up, and let us keep you updated on opportunities.`;
+    } if (result === 'Embedded') {
+      document.querySelector("#result-description").innerText = `You are in it right now. Mid-career; mid-family; mid-building-your-life. You have no time, but you do have tons of connections. Sign up, and let us keep you updated on how you might use your network to support your civic life.`;
+    } if (result === 'Exploring') {
+      document.querySelector("#result-description").innerText = `Whether stepping away from a long-term career or navigating shifts in family care needs, you have a ton of great experience to offer and are looking for a way to start. Sign up, and let us keep you updated on how you might use your time and expertise in civic engagement. `;
+    }
     document.querySelector("#result-image").src = '/images/result_' + result.toLowerCase() + '.svg';
     document.querySelector("#result-image").alt = 'Energetic';
 
