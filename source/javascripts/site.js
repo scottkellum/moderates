@@ -1,4 +1,4 @@
-var typeturaSelect = ['p', 'img', 'h1', 'blockquote', 'principle'];
+var typeturaSelect = ['p', 'img', 'h1', 'blockquote', 'principle', 'typetura'];
 
 var typeturaStyles = [
     'margin-top',
@@ -283,6 +283,7 @@ var typeturaInit = function(typeturaData, typeturaContext) {
             e.style.setProperty('--height',e.offsetHeight + 'px');
             e.style.setProperty('--top',e.offsetTop + 'px');
             e.style.setProperty('--left',e.offsetLeft + 'px');
+            e.style.setProperty('--rand',Math.random());
         }
     } momentumInit();
     window.addEventListener('resize',momentumInit);
