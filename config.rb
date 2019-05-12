@@ -33,11 +33,60 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+class Question < OpenStruct; end
+class Option < OpenStruct; end
+
+helpers do
+  def questions
+    [
+      Question.new(name: "What's your age range?", key: "age", options: [
+        Option.new(name: "Under 25", value: "1,0,0"),
+        Option.new(name: "Between 25 and 55", value: "0,1,0"),
+        Option.new(name: "Older than 55", value: "0,0,1")
+      ]),
+      Question.new(name: "Describe your typical week:", key: "week", options: [
+        Option.new(name: "That’s a more complicated question than you think it is", value: "1,0,0"),
+        Option.new(name: "I meet some deadlines but mostly make it up.", value: "0,1,0"),
+        Option.new(name: "Some appointments.", value: "0,0,1")
+      ]),
+      Question.new(name: "Describe how you spend your free time:", key: "freetime", options: [
+        Option.new(name: "Aside from work or school, hang out with friends.", value: "1,0,0"),
+        Option.new(name: "What free time? ", value: "0,1,0"),
+        Option.new(name: "That’s an open question.", value: "0,0,1")
+      ]),
+      Question.new(name: "What's your organizational style?", key: "org", options: [
+        Option.new(name: "Around school or work.", value: "1,0,0"),
+        Option.new(name: "Super tight on time, so I try to stick to a schedule.", value: "0,1,0"),
+        Option.new(name: "I have things pretty much in order.", value: "0,0,1")
+      ]),
+      Question.new(name: "What do you most crave from civic life?", key: "crave", options: [
+        Option.new(name: "Change: immediately, now, for the future.", value: "1,0,0"),
+        Option.new(name: "A slowdown on the news cycle, please.", value: "0,1,0"),
+        Option.new(name: "Inclusiveness: hearing less from either extreme.", value: "0,0,1")
+      ]),
+      Question.new(name: "What’s the most pressing issue for you?", key: "pressing", options: [
+        Option.new(name: "Climate Change", value: "0,0,0"),
+        Option.new(name: "Economic inequality", value: "0,0,0"),
+        Option.new(name: "Advocating for marginalized groups", value: "0,0,0")
+      ]),
+      Question.new(name: "What is something you feel like you don't have?", key: "lack", options: [
+        Option.new(name: "I just have no time.", value: "1,0,0"),
+        Option.new(name: "I'd like to have more focus on issues.", value: "0,1,0"),
+        Option.new(name: "I feel sort of out-of-the-loop.", value: "0,0,1")
+      ]),
+      Question.new(name: "What do you consider your biggest strength?", key: "strength", options: [
+        Option.new(name: "I have a deep and strong network.", value: "1,0,0"),
+        Option.new(name: "I have a ton of energy and I’m very motivated.", value: "0,1,0"),
+        Option.new(name: "I have a lot of experience with working through complicated life problems.", value: "0,0,1")
+      ]),
+      Question.new(name: "Which superpower?", key: "superpower", options: [
+        Option.new(name: "To be quantum, so I can be in more than one place at a time", value: "0,0,0"),
+        Option.new(name: "Super strength", value: "0,0,0"),
+        Option.new(name: "Telepathy (reading others thoughts)", value: "0,0,0")
+      ])
+    ]
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

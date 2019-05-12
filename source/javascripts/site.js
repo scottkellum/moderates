@@ -1,4 +1,4 @@
-var typeturaSelect = ['p', 'img', 'h1', 'blockquote'];
+var typeturaSelect = ['p', 'img', 'h1', 'blockquote', 'principle'];
 
 var typeturaStyles = [
     'margin-top',
@@ -147,16 +147,16 @@ var getTypeturaDataFromDOM = function(typeturaContext) {
 
   var momentumRoot = document.body.style;
   var momentumEls = document.querySelectorAll('.momentumcss');
-  
+
   var noiseInterval = cssTime(window.getComputedStyle(document.body).getPropertyValue('--noiseinterval'));
-  
-  
+
+
   window.addEventListener('scroll',momentumScroll,false);
   function momentumScroll() {
       momentumRoot.setProperty('--scrollx',window.scrollX + 'px');
       momentumRoot.setProperty('--scrolly',window.scrollY + 'px');
   }
-  
+
   window.addEventListener('pointermove',momentumPointer,false);
   function momentumPointer(e) {
       momentumRoot.setProperty('--clientx',e.clientX + 'px');
@@ -187,25 +187,25 @@ var getTypeturaDataFromDOM = function(typeturaContext) {
   function momentumTouchEnd(e) {
       momentumRoot.setProperty('--touches',e.targetTouches.length);
   }
-  
+
   window.addEventListener('deviceorientation', momentumOrientation);
   function momentumOrientation(e) {
       momentumRoot.setProperty('--orientalpha',e.alpha + 'deg');
       momentumRoot.setProperty('--orientbeta',e.beta + 'deg');
       momentumRoot.setProperty('--orientgamma',e.gamma + 'deg');
   }
-  
+
   // HELPER FUNCTIONS
   // https://gist.github.com/jakebellacera/9261266
   function cssTime(t) {
       var num = parseFloat(t, 10),
           unit = t.match(/m?s/),
           milliseconds;
-    
+
       if (unit) {
         unit = unit[0];
       }
-    
+
       switch (unit) {
         case "s": // seconds
           milliseconds = num * 1000;
@@ -217,25 +217,25 @@ var getTypeturaDataFromDOM = function(typeturaContext) {
           milliseconds = 0;
           break;
       }
-  
+
       return milliseconds;
     }
-    
+
 
     // -----------------------------------------------
 // Initiate typetura by building data and setting reference styles
 var typeturaInit = function(typeturaData, typeturaContext) {
     var typeturaWidth = typeturaContext.offsetWidth;
-  
+
     // set up custom props in head
     typeturaWrite(typeturaData, typeturaWidth, typeturaContext);
-  
+
     // Setup custom props on elements
     var elements = typeturaContext.querySelectorAll(typeturaSelect);
-  
+
     for (var k = 0; k < elements.length; k++) {
       var tag = elements[k].tagName.toLowerCase();
-  
+
       for (var prop in typeturaData[tag]) {
         if (prop.split('-')[0] === 'ms') {
           // Don’t write anything for ms values
@@ -247,7 +247,7 @@ var typeturaInit = function(typeturaData, typeturaContext) {
       }
     }
   };
-  
+
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = typeturaInit;
@@ -269,9 +269,9 @@ var typeturaInit = function(typeturaData, typeturaContext) {
     if (!window.typeturaData) {
       window.typeturaData = getTypeturaDataFromDOM(window.typeturaContext);
     }
-  
+
     window['typeturaInit'] = typeturaInit;
-  
+
     window.onload = function() {
       window.typeturaInit(window.typeturaData, window.typeturaContext);
       function momentumInit() {
@@ -289,10 +289,10 @@ var typeturaInit = function(typeturaData, typeturaContext) {
     if(noiseInterval > 0) {
         window.setInterval(function(){
             momentumRoot.setProperty('--noise',Math.random());
-        }, noiseInterval);  
+        }, noiseInterval);
     }
-    
-    
+
+
     // initialize for browsers that don’t support registering properties yet
     momentumRoot.setProperty('--scrollx',window.scrollX + 'px');
     momentumRoot.setProperty('--scrolly',window.scrollY + 'px');
@@ -304,13 +304,24 @@ var typeturaInit = function(typeturaData, typeturaContext) {
     momentumRoot.setProperty('--orientbeta','0deg');
     momentumRoot.setProperty('--orientgamma','0deg');
     momentumRoot.setProperty('--noise',Math.random());
-  
+
     };
-  
+
     window.onresize = function() {
       var typeturaWidth = window.typeturaContext.offsetWidth;
-  
+
       typeturaWrite(window.typeturaData, typeturaWidth, window.typeturaContext);
     };
   }
-  
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var videos = document.querySelectorAll('iframe[src*="vimeo.com"]');
+  videos.forEach(function(video) {
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('videowrap');
+    video.parentNode.insertBefore(wrapper, video);
+    wrapper.appendChild(video);
+  });
+});

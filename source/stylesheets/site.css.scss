@@ -163,8 +163,7 @@ ul {
   grid-column: 2 / 5;
   grid-row: 4 / 4;
   padding: 1rem;
-  margin: auto;
-  max-width: 100rem;
+  max-width: 60rem;
   @media (max-width: 40em) {
     grid-column: 1 / 6;
     grid-row: 4 / 5;
@@ -173,19 +172,107 @@ ul {
   }
 }
 
-.eleven {
-  grid-column: 2 / 4;
+.us {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  min-width: 200px;
+}
+
+.ana {
+  grid-column: 2 / 2;
   grid-row: 5 / 5;
   align-self: center;
   padding: 1rem;
   margin-right: 1rem;
+  filter: hue-rotate(30deg);
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 5 / 6;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.cheryl {
+  grid-column: 3 / 3;
+  grid-row: 5 / 5;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  filter: hue-rotate(25deg);
   @media (max-width: 40em) {
     grid-column: 1 / 6;
     grid-row: 6 / 7;
     margin-left: .5em;
     margin-right: .5em;
   }
+
 }
+
+.katrina {
+  grid-column: 4 / 4;
+  grid-row: 5 / 5;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  filter: hue-rotate(30deg);
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 7 / 8;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.scott {
+  grid-column: 2 / 2;
+  grid-row: 6 / 6;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  filter: hue-rotate(20deg);
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 8 / 9;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+.sal {
+  grid-column: 3 / 3;
+  grid-row: 6 / 6;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  filter: hue-rotate(30deg);
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 9 / 10;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+
+/*
+.principle {
+  grid-column: 4 / 4;
+  grid-row: 6 / 6;
+  align-self: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-family: freight-text-pro, serif;
+  font-weight: 1000;
+  font-style: italic;
+  @media (max-width: 40em) {
+    grid-column: 1 / 6;
+    grid-row: 10 / 11;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+*/
 
 .digitally {
   grid-column: 2 / 4;
@@ -228,25 +315,6 @@ filter: hue-rotate(250deg);
   grid-row: 5 / 6;
   margin: 0 15% 0 10%;
   width: 75%;
-  }
-}
-
-.us {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  min-width: 200px;
-}
-
-.seventeen {
-  grid-column: 2 / 3;
-  grid-row: 6 / 7;
-  filter: hue-rotate(10deg);
-  @media (max-width: 40em) {
-    grid-column: 1 / 6;
-    grid-row: 7 / 8;
-    margin: 0 15% 0 10%;
-    width: 75%;
   }
 }
 
@@ -459,10 +527,27 @@ footer {
 }
 
 
+.videowrap {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0 0 percentage(9/16) 0;
+  > iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
 /////////////////////////////////////////////////////////////////////
 // 3RD PARTY stylesheet
 
 // Mailchimp close modal z-index fix
 .mc-closeModal {
-  z-index: 9;
+  z-index: 9 !important;
 }
