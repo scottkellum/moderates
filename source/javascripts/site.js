@@ -1,4 +1,4 @@
-var typeturaSelect = ['p', 'img', 'h1', 'blockquote'];
+var typeturaSelect = ['p', 'img', 'h1', 'blockquote', 'principle'];
 
 var typeturaStyles = [
     'margin-top',
