@@ -198,6 +198,11 @@ ul {
   box-sizing: border-box;
 }
 
+.us-grid__item__rectangle {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .us-grid__ana .us-grid__item__image {
   filter: hue-rotate(calc(var(--rand) * 360deg));
 }
@@ -220,13 +225,17 @@ ul {
 
 .us-grid__principle {
   font-family: freight-text-pro,serif;
-  align-self: center;
+  align-self: top;
+  padding-top: 25%;
   text-align: center;
   --font-size:
     1em/300,
     2em/1200;
 }
 .us-grid__principle .us-grid__item__heading {
+  border-top: .4em solid #ff0;
+  filter: hue-rotate(calc(var(--rand) * 360deg));
+  padding-top: .75em;
   font-size: 2.75em;
   line-height: 1;
 }

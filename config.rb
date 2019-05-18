@@ -45,12 +45,12 @@ helpers do
         Option.new(name: "Older than 55", value: "0,0,1")
       ]),
       Question.new(name: "Describe your typical week:", key: "week", options: [
-        Option.new(name: "That’s a more complicated question than you think it is", value: "1,0,0"),
+        Option.new(name: "All weeks are the same: busy.", value: "2,0,0"),
         Option.new(name: "I meet some deadlines but mostly make it up.", value: "0,1,0"),
-        Option.new(name: "Some appointments.", value: "0,0,1")
+        Option.new(name: "Some appointments, but I pretty much have things under control.", value: "0,0,1")
       ]),
       Question.new(name: "Describe how you spend your free time:", key: "freetime", options: [
-        Option.new(name: "Aside from work or school, hang out with friends.", value: "1,0,0"),
+        Option.new(name: "Aside from work or school, I hang out with friends.", value: "1,0,0"),
         Option.new(name: "What free time? ", value: "0,1,0"),
         Option.new(name: "That’s an open question.", value: "0,0,1")
       ]),
