@@ -44,10 +44,10 @@ helpers do
         Option.new(name: "Between 25 and 55", value: "0,1,0"),
         Option.new(name: "Older than 55", value: "0,0,1")
       ]),
-      Question.new(name: "Describe your typical week:", key: "week", options: [
-        Option.new(name: "All weeks are the same: busy.", value: "2,0,0"),
-        Option.new(name: "I meet some deadlines but mostly make it up.", value: "0,1,0"),
-        Option.new(name: "Some appointments, but I pretty much have things under control.", value: "0,0,1")
+      Question.new(name: "What do you have most of?", key: "week", options: [
+        Option.new(name: "Networks: I have a lot of friends, and I know how to connect them.", value: "2,0,0"),
+        Option.new(name: "Energy: I need to get out there and get my hands dirty.", value: "0,1,0"),
+        Option.new(name: "Time: I'm in a life transition, and I'm looking to invest in something new.", value: "0,0,1")
       ]),
       Question.new(name: "Describe how you spend your free time:", key: "freetime", options: [
         Option.new(name: "Aside from work or school, I hang out with friends.", value: "1,0,0"),
