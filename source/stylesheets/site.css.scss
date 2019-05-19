@@ -183,6 +183,7 @@ ul {
   @media (max-width: 40em) {
     grid-column: 1 / 6;
     margin: 0 1.5em;
+    padding-bottom: 20em;
   }
 }
 
@@ -195,11 +196,6 @@ ul {
   border-radius: 50%;
   font-size: inherit;
   padding: 10%;
-  box-sizing: border-box;
-}
-
-.us-grid__item__rectangle {
-  width: 100%;
   box-sizing: border-box;
 }
 
