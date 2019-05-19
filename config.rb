@@ -45,7 +45,7 @@ helpers do
         Option.new(name: "Older than 55", value: "0,0,1")
       ]),
       Question.new(name: "What do you have most of?", key: "week", options: [
-        Option.new(name: "Networks: I have a lot of friends, and I know how to connect them.", value: "2,0,0"),
+        Option.new(name: "Networks: I have a lot of friends, and I know how to connect them.", value: "1,0,0"),
         Option.new(name: "Energy: I need to get out there and get my hands dirty.", value: "0,1,0"),
         Option.new(name: "Time: I'm in a life transition, and I'm looking to invest in something new.", value: "0,0,1")
       ]),
@@ -55,14 +55,14 @@ helpers do
         Option.new(name: "That’s an open question.", value: "0,0,1")
       ]),
       Question.new(name: "What's your organizational style?", key: "org", options: [
-        Option.new(name: "Around school or work.", value: "1,0,0"),
-        Option.new(name: "Super tight on time, so I try to stick to a schedule.", value: "0,1,0"),
+        Option.new(name: "Around school or work.", value: "0,1,0"),
+        Option.new(name: "Super tight on time, so I try to stick to a schedule.", value: "1,0,0"),
         Option.new(name: "I have things pretty much in order.", value: "0,0,1")
       ]),
       Question.new(name: "What do you most crave from civic life?", key: "crave", options: [
-        Option.new(name: "Change: immediately, now, for the future.", value: "1,0,0"),
-        Option.new(name: "A slowdown on the news cycle, please.", value: "0,1,0"),
-        Option.new(name: "Inclusiveness: hearing less from either extreme.", value: "0,0,1")
+        Option.new(name: "A sense that I have directly made change", value: "0,1,0"),
+        Option.new(name: "A sense that I have contributed, even though I can't devote a ton of time.", value: "1,0,0"),
+        Option.new(name: "A sense that I can give back for the long term.", value: "0,0,1")
       ]),
       Question.new(name: "What’s the most pressing issue for you?", key: "pressing", options: [
         Option.new(name: "Climate Change", value: "0,0,0"),
@@ -70,13 +70,13 @@ helpers do
         Option.new(name: "Advocating for marginalized groups", value: "0,0,0")
       ]),
       Question.new(name: "What is something you feel like you don't have?", key: "lack", options: [
-        Option.new(name: "I just have no time.", value: "1,0,0"),
-        Option.new(name: "I'd like to have more focus on issues.", value: "0,1,0"),
+        Option.new(name: "I just have no time.", value: "0,1,0"),
+        Option.new(name: "There are just so many causes I care about; how do I choose?", value: "1,0,0"),
         Option.new(name: "I feel sort of out-of-the-loop.", value: "0,0,1")
       ]),
       Question.new(name: "What do you consider your biggest strength?", key: "strength", options: [
-        Option.new(name: "I have a deep and strong network.", value: "1,0,0"),
-        Option.new(name: "I have a ton of energy and I’m very motivated.", value: "0,1,0"),
+        Option.new(name: "I have a deep and strong network.", value: "0,1,0"),
+        Option.new(name: "I have a ton of energy and I’m very motivated.", value: "1,0,0"),
         Option.new(name: "I have a lot of experience with working through complicated life problems.", value: "0,0,1")
       ]),
       Question.new(name: "Which superpower?", key: "superpower", options: [
