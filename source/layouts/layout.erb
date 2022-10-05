@@ -18,36 +18,6 @@
   crossorigin="anonymous"></script>
   </head>
   <body>
-      <nav id="nav">
-        <a href="partner.html"><strong>Partner</strong></a>
-        <a href="about.html"><strong>About</strong></a>
-        <a href="testimonials.html"><strong>Testimonals</strong></a>
-        <a href="election-information.html"><strong>Newsletter 10/24</strong></a>
-      </nav>
-    <article>
-      <div class="wrapper">
-        <div class= "two">
-          <a href="/">
-            <img class="logo" src="/images/logo_v4.svg" alt="🇺🇸" >
-          </a>
-        </div>
-        <%= yield %>
-      </div>
-    </article>
-    <footer>
-      <ol>
-          <h2>Credits</h2>
-          <li><span>Creative director:</span> Ana Monroe</li>
-          <li><span>Producer:</span> Katrina Kaufman</li>
-          <li><span>Lead designer:</span> Scott Kellum</li>
-      </ol>
-      <ol>
-          <h2>Sponsors</h2>
-          <li><a href="https://www.sixtyfirstproductions.com" style="font-family:halyard-display;font-weight:600;font-style:italic;color:#ff0;background-color:#000;display:block;padding:.4em;text-decoration: none;" target="_blank">Sixty First Productions</a></li>
-          <li><a href="https://www.aiga.org/" target="_blank"><img src="/images/aiga.png" alt="AIGA"></a></li>
-          <li><a href="http://www.brooklyngrain.com/" target="_blank"><img src="/images/brooklyngrain.png" alt="Brooklyn Grain"></a></li>
-      </ol>
-    </footer>
-    <%= javascript_include_tag "site" %>
+    <%= yield %>
   </body>
 </html>
